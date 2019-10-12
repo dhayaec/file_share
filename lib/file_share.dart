@@ -19,4 +19,10 @@ class FileShare {
 
     _channel.invokeMethod('filePath', argsMap);
   }
+
+  static Future<void> shareMultiple(List<String> videoPaths){
+    Map argsMap = <String, String>{ 'videoPaths': '$videoPaths'};
+
+    _channel.invokeMethod('shareMultiple', argsMap);
+  }
 }
